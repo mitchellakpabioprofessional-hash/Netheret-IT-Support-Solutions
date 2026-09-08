@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Netheret IT Support Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-wrapper {
+      max-width: 420px;
+      margin: 4rem auto;
+      border-top: 5px solid var(--blue-bell);
+    }
+    
+    .login-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .login-header h2 {
+      color: var(--deep-space-blue);
+    }
+
+    .a11y-toggle-box {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--mint-cream);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Netheret <span>IT Solutions</span></div>
+    <nav>
+      <ul>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="card login-wrapper">
+      <div class="login-header">
+        <h2>Staff Portal Login</h2>
+        <p style="font-size: 0.85rem; color: var(--baltic-blue);">Sign in to access helpdesk requests & field schedules</p>
+      </div>
+
+      <form action="dashboard.html" method="GET">
+        <div class="form-group">
+          <label for="username">Staff ID / Email</label>
+          <input type="text" id="username" class="form-control" placeholder="e.g. tech-jdoe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Staff Role</label>
+          <select id="role" class="form-control">
+            <option value="tier1">Tier 1 Support Staff</option>
+            <option value="tier2">Tier 2 Field Specialist</option>
+            <option value="tier3">Tier 3 Infrastructure Engineer</option>
+            <option value="manager">Service Manager</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Authenticate</button>
+
+        <div class="a11y-toggle-box">
+          <input type="checkbox" id="screen-reader-opt">
+          <label for="screen-reader-opt">Enable high-contrast mode for screen readers</label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Netheret IT Support Solutions - Internal Operations Portal
+  </footer>
+
+</body>
+</html>

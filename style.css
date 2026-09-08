@@ -1,0 +1,240 @@
+/* ==========================================================================
+   NETHERET IT SUPPORT SOLUTIONS - UNIFIED DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Hex Palette */
+  --blue-bell: #3e92cc;
+  --baltic-blue: #2a628f;
+  --deep-space-blue: #13293d;
+  --mint-cream: #f7fff6;
+  --sand-dune: #d7ceb2;
+
+  /* Typography & Sizing */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --border-radius: 8px;
+  --transition: all 0.25s ease;
+}
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--mint-cream);
+  color: var(--deep-space-blue);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--deep-space-blue);
+  color: var(--mint-cream);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(19, 41, 61, 0.15);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--blue-bell);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--sand-dune);
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+nav a:hover, nav a.active {
+  color: var(--mint-cream);
+  background-color: var(--baltic-blue);
+}
+
+/* Accessibility Toolbar Quick Bar */
+.a11y-bar {
+  background-color: var(--baltic-blue);
+  color: var(--mint-cream);
+  padding: 0.3rem 2rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a11y-controls button {
+  background: var(--deep-space-blue);
+  color: var(--mint-cream);
+  border: none;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+/* Layout Containers */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  flex: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--blue-bell);
+  color: var(--mint-cream);
+}
+
+.btn-primary:hover {
+  background-color: var(--baltic-blue);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--baltic-blue);
+  border: 2px solid var(--baltic-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--baltic-blue);
+  color: var(--mint-cream);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-tier1 { background-color: var(--sand-dune); color: var(--deep-space-blue); }
+.badge-tier2 { background-color: var(--blue-bell); color: var(--mint-cream); }
+.badge-tier3 { background-color: var(--baltic-blue); color: var(--mint-cream); }
+.badge-open { background-color: #e07a5f; color: #fff; }
+.badge-scheduled { background-color: var(--blue-bell); color: #fff; }
+.badge-resolved { background-color: var(--baltic-blue); color: #fff; }
+
+/* Cards & Panels */
+.card {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(19, 41, 61, 0.05);
+  border: 1px solid rgba(215, 206, 178, 0.3);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--deep-space-blue);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--sand-dune);
+  border-radius: var(--border-radius);
+  background-color: #ffffff;
+  font-family: inherit;
+  color: var(--deep-space-blue);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--blue-bell);
+  box-shadow: 0 0 0 3px rgba(62, 146, 204, 0.2);
+}
+
+/* Tables */
+.table-container {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: var(--baltic-blue);
+  color: var(--mint-cream);
+  padding: 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--mint-cream);
+  font-size: 0.9rem;
+}
+
+tbody tr:hover {
+  background-color: rgba(215, 206, 178, 0.15);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: var(--deep-space-blue);
+  color: var(--sand-dune);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+}

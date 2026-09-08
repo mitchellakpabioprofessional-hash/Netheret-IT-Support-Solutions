@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Netheret IT Support Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      border-left: 5px solid var(--blue-bell);
+    }
+
+    .stat-card .value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--deep-space-blue);
+      margin-top: 0.3rem;
+    }
+
+    .dashboard-layout {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .dashboard-layout { grid-template-columns: 1fr; }
+    }
+
+    .kb-list {
+      list-style: none;
+    }
+
+    .kb-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--mint-cream);
+      font-size: 0.9rem;
+    }
+
+    .kb-list li a {
+      color: var(--baltic-blue);
+      font-weight: 600;
+    }
+
+    .kb-list li a:hover {
+      color: var(--blue-bell);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Accessibility Toolbar -->
+  <div class="a11y-bar">
+    <span>Accessibility Options enabled</span>
+    <div class="a11y-controls">
+      <span>Text Size:</span>
+      <button onclick="document.body.style.fontSize='18px'">A+</button>
+      <button onclick="document.body.style.fontSize='16px'">A-</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Netheret <span>IT Solutions</span></div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="ticket.html">Tickets & Jobs</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <div>
+        <h2>System Performance & Dispatch</h2>
+        <p style="color: var(--baltic-blue); font-size: 0.9rem;">Overview of tickets, scheduling, and Tier 1-3 operations</p>
+      </div>
+      <a href="ticket.html" class="btn btn-primary">+ Log New Request</a>
+    </div>
+
+    <!-- Performance Insights -->
+    <div class="stats-grid">
+      <div class="card stat-card">
+        <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--baltic-blue); font-weight: bold;">Active Helpdesk Support</span>
+        <div class="value">28</div>
+        <small>Tier 1: 14 | Tier 2: 9 | Tier 3: 5</small>
+      </div>
+      <div class="card stat-card" style="border-left-color: var(--sand-dune);">
+        <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--baltic-blue); font-weight: bold;">Scheduled On-Site Maintenance</span>
+        <div class="value">6 Jobs</div>
+        <small>Next dispatch in 45 mins</small>
+      </div>
+      <div class="card stat-card" style="border-left-color: var(--baltic-blue);">
+        <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--baltic-blue); font-weight: bold;">Avg Resolution Time</span>
+        <div class="value">1.8 hrs</div>
+        <small>+12% performance vs last week</small>
+      </div>
+    </div>
+
+    <div class="dashboard-layout">
+      <!-- Active Requests Table -->
+      <div>
+        <h3 style="margin-bottom: 1rem; color: var(--deep-space-blue);">Support Requests & Field Operations</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Job / Ticket ID</th>
+                <th>Client / Business</th>
+                <th>Type</th>
+                <th>Support Tier</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location='ticket.html'">
+                <td><strong>#NET-8821</strong></td>
+                <td>Apex Retail Group</td>
+                <td>On-Site Infrastructure Setup</td>
+                <td><span class="badge badge-tier3">Tier 3</span></td>
+                <td><span class="badge badge-scheduled">Scheduled</span></td>
+              </tr>
+              <tr onclick="window.location='ticket.html'">
+                <td><strong>#NET-8822</strong></td>
+                <td>Vanguard Legal</td>
+                <td>VPN & Network Outage</td>
+                <td><span class="badge badge-tier2">Tier 2</span></td>
+                <td><span class="badge badge-open">Open</span></td>
+              </tr>
+              <tr onclick="window.location='ticket.html'">
+                <td><strong>#NET-8823</strong></td>
+                <td>Sanders Accounting</td>
+                <td>Printer & Driver Config</td>
+                <td><span class="badge badge-tier1">Tier 1</span></td>
+                <td><span class="badge badge-resolved">Resolved</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tier 1 Knowledge Base & Quick Tools -->
+      <div>
+        <h3 style="margin-bottom: 1rem; color: var(--deep-space-blue);">Tier 1 Diagnostics KB</h3>
+        <div class="card">
+          <p style="font-size: 0.85rem; margin-bottom: 1rem; color: var(--baltic-blue);">Quick diagnosis guides for Tier 1 support staff:</p>
+          <ul class="kb-list">
+            <li><a href="#">&rsaquo; Basic Network Connectivity Checks</a></li>
+            <li><a href="#">&rsaquo; Password Resets & MFA Issues</a></li>
+            <li><a href="#">&rsaquo; Firewall Exception Checklist</a></li>
+            <li><a href="#">&rsaquo; Escalation Rules: Tier 1 to Tier 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Netheret IT Support Solutions - Internal Operations Portal
+  </footer>
+
+</body>
+</html>

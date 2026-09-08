@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job #NET-8821 - Netheret IT Support</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .ticket-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 850px) {
+      .ticket-grid { grid-template-columns: 1fr; }
+    }
+
+    .brief-box {
+      background-color: var(--mint-cream);
+      border-left: 4px solid var(--baltic-blue);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+
+    .timeline {
+      margin-top: 1.5rem;
+    }
+
+    .timeline-item {
+      padding: 1rem;
+      background: var(--mint-cream);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      border-left: 3px solid var(--sand-dune);
+    }
+
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--baltic-blue);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Netheret <span>IT Solutions</span></div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="ticket.html" class="active">Tickets & Jobs</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+      <a href="dashboard.html" class="btn btn-secondary">&larr; Return to Dashboard</a>
+      <span class="badge badge-tier3">Tier 3 Custom Job Brief</span>
+    </div>
+
+    <div class="ticket-grid">
+      <!-- Main Job Details & Work Logs -->
+      <div class="card">
+        <h2 style="color: var(--deep-space-blue);">#NET-8821: On-Site Infrastructure Setup</h2>
+        <p style="color: var(--baltic-blue); font-size: 0.85rem;">Client: Apex Retail Group | Field Schedule: Oct 28, 2026 - 10:00 AM</p>
+        
+        <!-- Field Staff Customized Brief -->
+        <div class="brief-box">
+          <h4 style="color: var(--deep-space-blue); margin-bottom: 0.3rem;">Field Engineer Job Brief (Tier 2/3)</h4>
+          <p style="font-size: 0.9rem;"><strong>Objective:</strong> Deploy main server rack, switch stack, and setup Tier 3 firewall rules for new branch office.</p>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--deep-space-blue);"><em>Special Instructions: Access side door keycard provided by site contact Sarah Jenkins. Ensure rack cable labels match Netheret standard schema.</em></p>
+        </div>
+
+        <h3 style="margin-top: 2rem; color: var(--deep-space-blue);">Stakeholder Updates & Tracking</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div style="display: flex; justify-content: space-between;">
+              <strong>Tier 1 Helpdesk (Dispatch)</strong>
+              <small style="color: var(--baltic-blue);">Oct 27, 2026 - 02:15 PM</small>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 0.4rem;">Initial phone assessment complete. Hardware delivered to client site. Escalated to Tier 3 for physical deployment.</p>
+          </div>
+        </div>
+
+        <!-- Communication / Update form -->
+        <form style="margin-top: 2rem;">
+          <div class="form-group">
+            <label for="update-text">Add Log Entry or Update Stakeholder</label>
+            <textarea id="update-text" class="form-control" rows="3" placeholder="Enter progress updates or communicate with client..."></textarea>
+          </div>
+          <button type="button" class="btn btn-primary">Log Update</button>
+        </form>
+      </div>
+
+      <!-- On-Site Schedule Sidebar -->
+      <div class="card">
+        <h3 style="color: var(--deep-space-blue); margin-bottom: 1rem;">Job Parameters</h3>
+        
+        <div style="margin-bottom: 1rem;">
+          <div class="meta-label">Current Status</div>
+          <span class="badge badge-scheduled">Scheduled On-Site</span>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <div class="meta-label">Assigned Field Engineer</div>
+          <p style="font-weight: 600;">David Ross (Tier 3 Specialist)</p>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <div class="meta-label">On-Site Location</div>
+          <p style="font-size: 0.9rem;">104 High Street, Suite 4B<br>Apex HQ</p>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <div class="meta-label">Service Type</div>
+          <p style="font-size: 0.9rem;">Infrastructure Installation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Netheret IT Support Solutions - Internal Operations Portal
+  </footer>
+
+</body>
+</html>
